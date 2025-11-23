@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OSINT Tools</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #0b0b0b;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 25px 0;
+            background: #141414;
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding-top: 25px;
+        }
+
+        .block-title {
+            margin-top: 35px;
+            font-size: 24px;
+            color: #4ab3ff;
+            border-left: 5px solid #4ab3ff;
+            padding-left: 10px;
+        }
+
+        .tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(230px,1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .card {
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #2e2e2e;
+            transition: 0.2s;
+            text-align: center;
+        }
+
+        .card:hover {
+            background: #232323;
+            transform: scale(1.03);
+        }
+
+        a {
+            color: #4ab3ff;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        p {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #9b9b9b;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>OSINT TOOL COLLECTION</h1>
+
+<div class="container">
+
+    <!-- IMAGE OSINT -->
+    <div class="block-title">Image OSINT</div>
+    <div class="tools">
+        <div class="card">
+            <a href="https://images.google.com" target="_blank">Google Reverse</a>
+            <p>Reverse image search</p>
+        </div>
+        <div class="card">
+            <a href="https://yandex.com/images" target="_blank">Yandex Images</a>
+            <p>Strong image search</p>
+        </div>
+        <div class="card">
+            <a href="https://www.bing.com/images/search" target="_blank">Bing Images</a>
+            <p>Alternative image OSINT</p>
+        </div>
+        <div class="card">
+            <a href="https://exif.tools" target="_blank">EXIF Tools</a>
+            <p>Image metadata</p>
+        </div>
+        <div class="card">
+            <a href="https://get-metadata.com" target="_blank">Get-Metadata</a>
+            <p>EXIF viewer</p>
+        </div>
+    </div>
+
+    <!-- USERNAME OSINT -->
+    <div class="block-title">Username OSINT</div>
+    <div class="tools">
+        <div class="card">
+            <a href="https://whatsmyname.app" target="_blank">WhatsMyName</a>
+            <p>Search username globally</p>
+        </div>
+        <div class="card">
+            <a href="https://namechk.com" target="_blank">Namechk</a>
+            <p>Username availability</p>
+        </div>
+        <div class="card">
+            <a href="https://namevine.com" target="_blank">Namevine</a>
+            <p>Social + domain check</p>
+        </div>
+    </div>
+
+    <!-- WEBSITE / URL OSINT -->
+    <div class="block-title">Website / URL Investigation</div>
+    <div class="tools">
+        <div class="card">
+            <a href="https://who.is" target="_blank">WHOIS Lookup</a>
+            <p>Domain info</p>
+        </div>
+        <div class="card">
+            <a href="https://builtwith.com" target="_blank">BuiltWith</a>
+            <p>Website technology</p>
+        </div>
+        <div class="card">
+            <a href="https://urlscan.io" target="_blank">UrlScan</a>
+            <p>Scan website</p>
+        </div>
+        <div class="card">
+            <a href="https://virustotal.com" target="_blank">VirusTotal</a>
+            <p>URL/file scan</p>
+        </div>
+    </div>
+
+    <!-- IP INFO -->
+    <div class="block-title">IP Tools</div>
+    <div class="tools">
+        <div class="card">
+            <a href="https://ipinfo.io" target="_blank">IPinfo</a>
+            <p>Your IP only</p>
+        </div>
+        <div class="card">
+            <a href="https://whatismyipaddress.com" target="_blank">WhatIsMyIP</a>
+            <p>IP data</p>
+        </div>
+    </div>
+
+    <!-- FILE TOOLS -->
+    <div class="block-title">File Analysis Tools</div>
+    <div class="tools">
+        <div class="card">
+            <a href="https://filext.com" target="_blank">FileXT</a>
+            <p>File type info</p>
+        </div>
+        <div class="card">
+            <a href="https://www.hybrid-analysis.com" target="_blank">Hybrid Analysis</a>
+            <p>File deep scan</p>
+        </div>
+    </div>
+
+    <!-- GEOLOCATION TRAINING -->
+    <div class="block-title">Geolocation Training</div>
+    <div class="tools">
+        <div class="card">
+            <a href="https://geoguessr.com" target="_blank">GeoGuessr</a>
+            <p>Geolocation game</p>
+        </div>
+        <div class="card">
+            <a href="https://geospy.ai" target="_blank">GeoSpy</a>
+            <p>Street image OSINT</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
