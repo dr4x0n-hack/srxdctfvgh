@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Geolocation Trainer Stats</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { background: #111; color: #fff; font-family: Arial; text-align: center; }
+        canvas { background: #222; border-radius: 10px; margin-top: 50px; }
+        h1 { margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<h1>Geolocation Trainer Stats</h1>
+<canvas id="statsChart" width="600" height="400"></canvas>
+
+<script>
+    // Dummy data, keyingi real ballarni JS orqali osint o'yinidan olsak bo'ladi
+    const labels = ["Tokyo", "Paris", "Dubai"];
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Correct Guesses',
+            data: [3, 1, 2],
+            backgroundColor: ['#f39c12','#e74c3c','#2ecc71'],
+            borderColor: '#fff',
+            borderWidth: 1
+        }]
+    };
+
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { labels: { color: 'white' } },
+                title: { display: true, text: 'Correct Guesses per City', color: 'white', font: { size: 20 } }
+            },
+            scales: {
+                x: { ticks: { color: 'white' } },
+                y: { ticks: { color: 'white', stepSize: 1 }, beginAtZero: true }
+            }
+        }
+    };
+
+    const statsChart = new Chart(
+        document.getElementById('statsChart'),
+        config
+    );
+</script>
+
+</body>
+</html>
