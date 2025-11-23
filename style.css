@@ -1,0 +1,30 @@
+body {
+    background: #111;
+    color: #fff;
+    font-family: Arial;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background: #444;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #666;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+#geo-box img {
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
