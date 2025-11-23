@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>OSINT HUB & Geolocation Trainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>OSINT HUB</h1>
+
+<div class="section">
+    <h2>Reverse Image Search</h2>
+    <button onclick="openTool('https://images.google.com')">Google Images</button>
+    <button onclick="openTool('https://yandex.com/images/')">Yandex Images</button>
+    <button onclick="openTool('https://www.bing.com/images')">Bing Images</button>
+</div>
+
+<div class="section">
+    <h2>Metadata / EXIF Tools</h2>
+    <button onclick="openTool('https://exif.tools')">EXIF Tools</button>
+    <button onclick="openTool('https://www.get-metadata.com')">Get Metadata</button>
+</div>
+
+<hr>
+
+<h1>Geolocation Trainer</h1>
+<div id="geo-box">
+    <img id="geo-img" src="" alt="challenge image">
+    <input id="guess" placeholder="City, Country">
+    <button onclick="checkGuess()">Check</button>
+    <p id="result"></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
