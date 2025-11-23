@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kali Web Terminal</title>
+    <style>
+        body {
+            margin: 0;
+            background: #0c0c0c;
+            font-family: monospace;
+        }
+        #terminal {
+            background: #000;
+            color: #00ff88;
+            padding: 15px;
+            height: 90vh;
+            overflow-y: auto;
+            border-top: 3px solid #00ff88;
+            box-shadow: inset 0 0 10px #00ff88;
+        }
+        #input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            background: #0c0c0c;
+            color: #00ff88;
+            font-size: 16px;
+        }
+        ::selection { background: #00ff88; color: #000; }
+    </style>
+</head>
+<body>
+
+<div id="terminal">
+    <pre>
+██╗  ██╗ █████╗ ██╗     ██╗
+██║ ██╔╝██╔══██╗██║     ██║
+█████╔╝ ███████║██║     ██║
+██╔═██╗ ██╔══██║██║     ██║
+██║  ██╗██║  ██║███████╗███████╗
+╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝
+
+     Kali Web Terminal — Safe OSINT Edition
+ -------------------------------------------------
+ Type "help" to view available commands
+ -------------------------------------------------
+    </pre>
+</div>
+
+<input id="input" placeholder="root@kaliosint:~$" autofocus>
+
+<script>
+const term = document.getElementById("terminal");
+const input = document.getElementById("input");
+
+function print(text) {
+    term.innerHTML += text + "<br>";
+    term.scrollTop = term.scrollHeight;
+}
+
+async function runCommand(cmd) {
+    print("root@kaliosint:~$ " + cmd);
+
+    let res = await fetch("/run", {
+        method:"POST",
+        headers:{ "Content-Type":"application/json" },
+        body:JSON.stringify({ command: cmd })
+    });
+
+    print(await res.text());
+}
+
+input.addEventListener("keydown", (e)=>{
+    if(e.key === "Enter"){
+        runCommand(input.value);
+        input.value = "";
+    }
+});
+</script>
+
+</body>
+</html>
